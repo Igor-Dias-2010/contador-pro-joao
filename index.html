@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador do João</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Contador do João</h1>
+    <section>
+    <p id="resultado">0</p>
+    <button id="botao" onclick="dividircinco()">/5</button>
+    <button id="botao" onclick="dividirquatro()">/4</button>
+    <button id="botao" onclick="dividirdois()">/2</button>
+    <button id = "botao" onclick="menosum()">-1</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id = "botao" onclick="maisum()">+1</button>
+    <button id="botao" onclick="multidois()">*2</button>
+    <button id="botao" onclick="multiquatro()">*4</button>
+    <button id="botao" onclick="multicinco()">*5</button>
+</section>
+     <script>
+        let numero = 0
+        function maisum(){
+            numero += 1
+            render();
+        }
+        function menosum(){
+            numero -= 1
+            render();
+        }
+        function dividirdois(){
+            numero /= 2
+            render()
+        }
+        function dividirquatro(){
+            numero /= 4
+            render()
+        }
+        function dividircinco(){
+            numero /= 5
+            render()
+        }
+        function multidois(){
+            numero *=2
+            render()
+        }
+        function multiquatro(){
+            numero *= 4
+            render()
+        }
+        function multicinco(){
+            numero *= 5
+            render()
+        }
+        function reset(){
+            numero = 0
+            render()
+        }
+        function render(){
+            const p = document.querySelector("#resultado")
+            p.innerText = numero
+        }
+     </script>
+</body>
+</html>
